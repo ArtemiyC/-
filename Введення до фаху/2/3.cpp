@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     int rows;
-    cout << "Ââåä³òü ê³ëüê³ñòü ðÿäê³â: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÐºÑ–Ð»ÑŒÐºÑ–ÑÑ‚ÑŒ Ñ€ÑÐ´ÐºÑ–Ð²: ";
     cin >> rows;
 
     for (int i = 1; i <= rows; i++) {
