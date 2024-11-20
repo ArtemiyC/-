@@ -19,21 +19,21 @@ void addPlayer(vector<Player>& team, const string& name, const string& position,
 
 void displayPlayers(const vector<Player>& team) {
     for (const auto& player : team) {
-        cout << "²ì'ÿ: " << player.name
-            << ", Ïîçèö³ÿ: " << player.position
-            << ", Ãîëè: " << player.goals
-            << ", Ìàò÷³: " << player.matches
-            << ", Ðåéòèíã: " << player.rating << endl;
+        cout << "Ð†Ð¼'Ñ: " << player.name
+            << ", ÐŸÐ¾Ð·Ð¸Ñ†Ñ–Ñ: " << player.position
+            << ", Ð“Ð¾Ð»Ð¸: " << player.goals
+            << ", ÐœÐ°Ñ‚Ñ‡Ñ–: " << player.matches
+            << ", Ð ÐµÐ¹Ñ‚Ð¸Ð½Ð³: " << player.rating << endl;
     }
 }
 
 void searchPlayersByPosition(const vector<Player>& team, const string& position) {
     for (const auto& player : team) {
         if (player.position == position) {
-            cout << "²ì'ÿ: " << player.name
-                << ", Ãîëè: " << player.goals
-                << ", Ìàò÷³: " << player.matches
-                << ", Ðåéòèíã: " << player.rating << endl;
+            cout << "Ð†Ð¼'Ñ: " << player.name
+                << ", Ð“Ð¾Ð»Ð¸: " << player.goals
+                << ", ÐœÐ°Ñ‚Ñ‡Ñ–: " << player.matches
+                << ", Ð ÐµÐ¹Ñ‚Ð¸Ð½Ð³: " << player.rating << endl;
         }
     }
 }
@@ -74,9 +74,9 @@ void formOptimalTeam(const vector<Player>& team) {
     sort(sortedTeam.begin(), sortedTeam.end(), [](const Player& a, const Player& b) {
         return a.rating > b.rating;
         });
-    cout << "Îïòèìàëüíèé ñêëàä (çà ðåéòèíãîì):" << endl;
+    cout << "ÐžÐ¿Ñ‚Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¸Ð¹ ÑÐºÐ»Ð°Ð´ (Ð·Ð° Ñ€ÐµÐ¹Ñ‚Ð¸Ð½Ð³Ð¾Ð¼):" << endl;
     for (const auto& player : sortedTeam) {
-        cout << "²ì'ÿ: " << player.name << ", Ðåéòèíã: " << player.rating << endl;
+        cout << "Ð†Ð¼'Ñ: " << player.name << ", Ð ÐµÐ¹Ñ‚Ð¸Ð½Ð³: " << player.rating << endl;
     }
 }
 
@@ -85,22 +85,22 @@ int main() {
     int choice;
 
     do {
-        cout << "\n1. Äîäàòè ãðàâöÿ\n2. Ïîêàçàòè ãðàâö³â\n3. Ïîøóê çà ïîçèö³ºþ\n4. Çàãàëüíà ê³ëüê³ñòü ãîë³â\n5. Íàéêðàùèé áîìáàðäèð\n6. Ãðàâåöü ç íàéâèùèì ðåéòèíãîì\n7. Îíîâèòè äàí³ ãðàâöÿ\n8. Ôîðìóâàòè ñêëàä\n0. Âèõ³ä\n";
+        cout << "\n1. Ð”Ð¾Ð´Ð°Ñ‚Ð¸ Ð³Ñ€Ð°Ð²Ñ†Ñ\n2. ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚Ð¸ Ð³Ñ€Ð°Ð²Ñ†Ñ–Ð²\n3. ÐŸÐ¾ÑˆÑƒÐº Ð·Ð° Ð¿Ð¾Ð·Ð¸Ñ†Ñ–Ñ”ÑŽ\n4. Ð—Ð°Ð³Ð°Ð»ÑŒÐ½Ð° ÐºÑ–Ð»ÑŒÐºÑ–ÑÑ‚ÑŒ Ð³Ð¾Ð»Ñ–Ð²\n5. ÐÐ°Ð¹ÐºÑ€Ð°Ñ‰Ð¸Ð¹ Ð±Ð¾Ð¼Ð±Ð°Ñ€Ð´Ð¸Ñ€\n6. Ð“Ñ€Ð°Ð²ÐµÑ†ÑŒ Ð· Ð½Ð°Ð¹Ð²Ð¸Ñ‰Ð¸Ð¼ Ñ€ÐµÐ¹Ñ‚Ð¸Ð½Ð³Ð¾Ð¼\n7. ÐžÐ½Ð¾Ð²Ð¸Ñ‚Ð¸ Ð´Ð°Ð½Ñ– Ð³Ñ€Ð°Ð²Ñ†Ñ\n8. Ð¤Ð¾Ñ€Ð¼ÑƒÐ²Ð°Ñ‚Ð¸ ÑÐºÐ»Ð°Ð´\n0. Ð’Ð¸Ñ…Ñ–Ð´\n";
         cin >> choice;
 
         if (choice == 1) {
             string name, position;
             int goals, matches;
             double rating;
-            cout << "²ì'ÿ: ";
+            cout << "Ð†Ð¼'Ñ: ";
             cin >> name;
-            cout << "Ïîçèö³ÿ: ";
+            cout << "ÐŸÐ¾Ð·Ð¸Ñ†Ñ–Ñ: ";
             cin >> position;
-            cout << "Ãîëè: ";
+            cout << "Ð“Ð¾Ð»Ð¸: ";
             cin >> goals;
-            cout << "Ìàò÷³: ";
+            cout << "ÐœÐ°Ñ‚Ñ‡Ñ–: ";
             cin >> matches;
-            cout << "Ðåéòèíã: ";
+            cout << "Ð ÐµÐ¹Ñ‚Ð¸Ð½Ð³: ";
             cin >> rating;
             addPlayer(team, name, position, goals, matches, rating);
         }
@@ -109,32 +109,32 @@ int main() {
         }
         else if (choice == 3) {
             string position;
-            cout << "Ïîçèö³ÿ: ";
+            cout << "ÐŸÐ¾Ð·Ð¸Ñ†Ñ–Ñ: ";
             cin >> position;
             searchPlayersByPosition(team, position);
         }
         else if (choice == 4) {
-            cout << "Çàãàëüíà ê³ëüê³ñòü ãîë³â: " << calculateTotalGoals(team) << endl;
+            cout << "Ð—Ð°Ð³Ð°Ð»ÑŒÐ½Ð° ÐºÑ–Ð»ÑŒÐºÑ–ÑÑ‚ÑŒ Ð³Ð¾Ð»Ñ–Ð²: " << calculateTotalGoals(team) << endl;
         }
         else if (choice == 5) {
             Player topScorer = findTopScorer(team);
-            cout << "Íàéêðàùèé áîìáàðäèð: " << topScorer.name << " ç " << topScorer.goals << " ãîëàìè." << endl;
+            cout << "ÐÐ°Ð¹ÐºÑ€Ð°Ñ‰Ð¸Ð¹ Ð±Ð¾Ð¼Ð±Ð°Ñ€Ð´Ð¸Ñ€: " << topScorer.name << " Ð· " << topScorer.goals << " Ð³Ð¾Ð»Ð°Ð¼Ð¸." << endl;
         }
         else if (choice == 6) {
             Player bestPlayer = findBestRatedPlayer(team);
-            cout << "Ãðàâåöü ç íàéâèùèì ðåéòèíãîì: " << bestPlayer.name << " (Ðåéòèíã: " << bestPlayer.rating << ")" << endl;
+            cout << "Ð“Ñ€Ð°Ð²ÐµÑ†ÑŒ Ð· Ð½Ð°Ð¹Ð²Ð¸Ñ‰Ð¸Ð¼ Ñ€ÐµÐ¹Ñ‚Ð¸Ð½Ð³Ð¾Ð¼: " << bestPlayer.name << " (Ð ÐµÐ¹Ñ‚Ð¸Ð½Ð³: " << bestPlayer.rating << ")" << endl;
         }
         else if (choice == 7) {
             string name;
             int goals, matches;
             double rating;
-            cout << "²ì'ÿ: ";
+            cout << "Ð†Ð¼'Ñ: ";
             cin >> name;
-            cout << "Íîâ³ ãîëè: ";
+            cout << "ÐÐ¾Ð²Ñ– Ð³Ð¾Ð»Ð¸: ";
             cin >> goals;
-            cout << "Íîâ³ ìàò÷³: ";
+            cout << "ÐÐ¾Ð²Ñ– Ð¼Ð°Ñ‚Ñ‡Ñ–: ";
             cin >> matches;
-            cout << "Íîâèé ðåéòèíã: ";
+            cout << "ÐÐ¾Ð²Ð¸Ð¹ Ñ€ÐµÐ¹Ñ‚Ð¸Ð½Ð³: ";
             cin >> rating;
             updatePlayerStats(team, name, goals, matches, rating);
         }
