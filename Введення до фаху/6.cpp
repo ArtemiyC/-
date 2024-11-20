@@ -14,22 +14,22 @@ int main() {
     vector<Product> inventory;
     int choice;
     do {
-        cout << "1. Äîäàòè òîâàð\n2. Âèäàëèòè òîâàð\n3. Îíîâèòè ê³ëüê³ñòü\n4. Ïîêàçàòè òîâàðè\n5. Çàãàëüíà âàðò³ñòü\n0. Âèõ³ä\n";
+        cout << "1. Ð”Ð¾Ð´Ð°Ñ‚Ð¸ Ñ‚Ð¾Ð²Ð°Ñ€\n2. Ð’Ð¸Ð´Ð°Ð»Ð¸Ñ‚Ð¸ Ñ‚Ð¾Ð²Ð°Ñ€\n3. ÐžÐ½Ð¾Ð²Ð¸Ñ‚Ð¸ ÐºÑ–Ð»ÑŒÐºÑ–ÑÑ‚ÑŒ\n4. ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚Ð¸ Ñ‚Ð¾Ð²Ð°Ñ€Ð¸\n5. Ð—Ð°Ð³Ð°Ð»ÑŒÐ½Ð° Ð²Ð°Ñ€Ñ‚Ñ–ÑÑ‚ÑŒ\n0. Ð’Ð¸Ñ…Ñ–Ð´\n";
         cin >> choice;
 
         if (choice == 1) {
             Product p;
-            cout << "Íàçâà: ";
+            cout << "ÐÐ°Ð·Ð²Ð°: ";
             cin >> p.name;
-            cout << "Ê³ëüê³ñòü: ";
+            cout << "ÐšÑ–Ð»ÑŒÐºÑ–ÑÑ‚ÑŒ: ";
             cin >> p.quantity;
-            cout << "Ö³íà: ";
+            cout << "Ð¦Ñ–Ð½Ð°: ";
             cin >> p.price;
             inventory.push_back(p);
         }
         else if (choice == 2) {
             string name;
-            cout << "Íàçâà: ";
+            cout << "ÐÐ°Ð·Ð²Ð°: ";
             cin >> name;
             for (size_t i = 0; i < inventory.size(); ++i) {
                 if (inventory[i].name == name) {
@@ -41,9 +41,9 @@ int main() {
         else if (choice == 3) {
             string name;
             int quantity;
-            cout << "Íàçâà: ";
+            cout << "ÐÐ°Ð·Ð²Ð°: ";
             cin >> name;
-            cout << "Íîâà ê³ëüê³ñòü: ";
+            cout << "ÐÐ¾Ð²Ð° ÐºÑ–Ð»ÑŒÐºÑ–ÑÑ‚ÑŒ: ";
             cin >> quantity;
             for (auto& p : inventory) {
                 if (p.name == name) {
@@ -54,7 +54,7 @@ int main() {
         }
         else if (choice == 4) {
             for (const auto& p : inventory) {
-                cout << "Íàçâà: " << p.name << ", Ê³ëüê³ñòü: " << p.quantity << ", Ö³íà: " << p.price << endl;
+                cout << "ÐÐ°Ð·Ð²Ð°: " << p.name << ", ÐšÑ–Ð»ÑŒÐºÑ–ÑÑ‚ÑŒ: " << p.quantity << ", Ð¦Ñ–Ð½Ð°: " << p.price << endl;
             }
         }
         else if (choice == 5) {
@@ -62,7 +62,7 @@ int main() {
             for (const auto& p : inventory) {
                 total += p.quantity * p.price;
             }
-            cout << "Çàãàëüíà âàðò³ñòü: " << total << endl;
+            cout << "Ð—Ð°Ð³Ð°Ð»ÑŒÐ½Ð° Ð²Ð°Ñ€Ñ‚Ñ–ÑÑ‚ÑŒ: " << total << endl;
         }
     } while (choice != 0);
 
