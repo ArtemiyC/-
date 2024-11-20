@@ -3,24 +3,24 @@ using namespace std;
 
 int main() {
     int age, salary;
-    cout << "Ââåä³òü âàø â³ê: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð²Ð°Ñˆ Ð²Ñ–Ðº: ";
     cin >> age;
-    cout << "Ââåä³òü âàøó çàðïëàòó: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð²Ð°ÑˆÑƒ Ð·Ð°Ñ€Ð¿Ð»Ð°Ñ‚Ñƒ: ";
     cin >> salary;
 
     if (age > 20 && salary > 400 && salary < 1000) {
         cout << "We will consider your position" << endl;
 
         string firstName, lastName, desiredPosition;
-        cout << "Ââåä³òü âàøå ³ì'ÿ: ";
+        cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð²Ð°ÑˆÐµ Ñ–Ð¼'Ñ: ";
         cin >> firstName;
-        cout << "Ââåä³òü âàøå ïð³çâèùå: ";
+        cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð²Ð°ÑˆÐµ Ð¿Ñ€Ñ–Ð·Ð²Ð¸Ñ‰Ðµ: ";
         cin >> lastName;
-        cout << "Ââåä³òü áàæàíó ïîñàäó: ";
+        cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð±Ð°Ð¶Ð°Ð½Ñƒ Ð¿Ð¾ÑÐ°Ð´Ñƒ: ";
         cin >> desiredPosition;
 
-        cout << "²ì'ÿ: " << firstName << ", Ïð³çâèùå: " << lastName << ", Ïîñàäà: " << desiredPosition
-            << ", Â³ê: " << age << ", Çàðïëàòà: " << salary << endl;
+        cout << "Ð†Ð¼'Ñ: " << firstName << ", ÐŸÑ€Ñ–Ð·Ð²Ð¸Ñ‰Ðµ: " << lastName << ", ÐŸÐ¾ÑÐ°Ð´Ð°: " << desiredPosition
+            << ", Ð’Ñ–Ðº: " << age << ", Ð—Ð°Ñ€Ð¿Ð»Ð°Ñ‚Ð°: " << salary << endl;
     }
     else {
         cout << "You are not suitable" << endl;
