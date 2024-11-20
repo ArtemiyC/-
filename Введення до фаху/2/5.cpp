@@ -3,12 +3,12 @@ using namespace std;
 
 int main() {
     int num1, num2;
-    cout << "Ââåä³òü ïåğøå ÷èñëî: ";
+    cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ Ğ¿ĞµÑ€ÑˆĞµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
     cin >> num1;
-    cout << "Ââåä³òü äğóãå ÷èñëî: ";
+    cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ Ğ´Ñ€ÑƒĞ³Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾: ";
     cin >> num2;
 
-    cout << "Àäğåñà num1: " << &num1 << ", Àäğåñà num2: " << &num2 << endl;
+    cout << "ĞĞ´Ñ€ĞµÑĞ° num1: " << &num1 << ", ĞĞ´Ñ€ĞµÑĞ° num2: " << &num2 << endl;
 
     for (int i = num1; i <= num2; i++) {
         cout << -i << " ";
