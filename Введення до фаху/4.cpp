@@ -33,22 +33,22 @@ int main() {
     int x = 5, y = 10, z = 15;
     int result = 0, evenCount = 0, oddCount = 0, min = 0, max = 0;
 
-    cout << "Çíà÷åííÿ äî êîï³şâàííÿ: x = " << x << ", y = " << y << endl;
+    cout << "Ğ—Ğ½Ğ°Ñ‡ĞµĞ½Ğ½Ñ Ğ´Ğ¾ ĞºĞ¾Ğ¿Ñ–ÑĞ²Ğ°Ğ½Ğ½Ñ: x = " << x << ", y = " << y << endl;
     copyValue(&x, &y);
-    cout << "Çíà÷åííÿ ï³ñëÿ êîï³şâàííÿ: x = " << x << ", y = " << y << endl;
+    cout << "Ğ—Ğ½Ğ°Ñ‡ĞµĞ½Ğ½Ñ Ğ¿Ñ–ÑĞ»Ñ ĞºĞ¾Ğ¿Ñ–ÑĞ²Ğ°Ğ½Ğ½Ñ: x = " << x << ", y = " << y << endl;
 
     countEvenOdd(&x, &y, &z, &evenCount, &oddCount);
-    cout << "Ïàğíèõ ÷èñåë: " << evenCount << ", Íåïàğíèõ ÷èñåë: " << oddCount << endl;
+    cout << "ĞŸĞ°Ñ€Ğ½Ğ¸Ñ… Ñ‡Ğ¸ÑĞµĞ»: " << evenCount << ", ĞĞµĞ¿Ğ°Ñ€Ğ½Ğ¸Ñ… Ñ‡Ğ¸ÑĞµĞ»: " << oddCount << endl;
 
     multiply(&x, &z, &result);
-    cout << "Ğåçóëüòàò ìíîæåííÿ x ³ z: " << result << endl;
+    cout << "Ğ ĞµĞ·ÑƒĞ»ÑŒÑ‚Ğ°Ñ‚ Ğ¼Ğ½Ğ¾Ğ¶ĞµĞ½Ğ½Ñ x Ñ– z: " << result << endl;
 
-    cout << "Çíà÷åííÿ äî îáì³íó: x = " << x << ", y = " << y << endl;
+    cout << "Ğ—Ğ½Ğ°Ñ‡ĞµĞ½Ğ½Ñ Ğ´Ğ¾ Ğ¾Ğ±Ğ¼Ñ–Ğ½Ñƒ: x = " << x << ", y = " << y << endl;
     swapWithoutTemp(&x, &y);
-    cout << "Çíà÷åííÿ ï³ñëÿ îáì³íó: x = " << x << ", y = " << y << endl;
+    cout << "Ğ—Ğ½Ğ°Ñ‡ĞµĞ½Ğ½Ñ Ğ¿Ñ–ÑĞ»Ñ Ğ¾Ğ±Ğ¼Ñ–Ğ½Ñƒ: x = " << x << ", y = " << y << endl;
 
     findMinMax(&x, &y, &z, &min, &max);
-    cout << "Ì³í³ìàëüíå: " << min << ", Ìàêñèìàëüíå: " << max << endl;
+    cout << "ĞœÑ–Ğ½Ñ–Ğ¼Ğ°Ğ»ÑŒĞ½Ğµ: " << min << ", ĞœĞ°ĞºÑĞ¸Ğ¼Ğ°Ğ»ÑŒĞ½Ğµ: " << max << endl;
 
     return 0;
 }
