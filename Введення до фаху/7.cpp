@@ -52,7 +52,7 @@ double calculateAverage(const Student* students, int size) {
 
 void displayStudents(const Student* students, int size) {
     for (int i = 0; i < size; ++i) {
-        cout << "²ì'ÿ: " << students[i].name << ", Îö³íêà: " << students[i].grade << endl;
+        cout << "Ð†Ð¼'Ñ: " << students[i].name << ", ÐžÑ†Ñ–Ð½ÐºÐ°: " << students[i].grade << endl;
     }
 }
 
@@ -62,26 +62,26 @@ int main() {
     int choice;
 
     do {
-        cout << "1. Äîäàòè ñòóäåíòà\n2. Âèäàëèòè ñòóäåíòà\n3. Ñåðåäí³é áàë\n4. Ïîêàçàòè ñïèñîê\n0. Âèõ³ä\n";
+        cout << "1. Ð”Ð¾Ð´Ð°Ñ‚Ð¸ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°\n2. Ð’Ð¸Ð´Ð°Ð»Ð¸Ñ‚Ð¸ ÑÑ‚ÑƒÐ´ÐµÐ½Ñ‚Ð°\n3. Ð¡ÐµÑ€ÐµÐ´Ð½Ñ–Ð¹ Ð±Ð°Ð»\n4. ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚Ð¸ ÑÐ¿Ð¸ÑÐ¾Ðº\n0. Ð’Ð¸Ñ…Ñ–Ð´\n";
         cin >> choice;
 
         if (choice == 1) {
             string name;
             double grade;
-            cout << "²ì'ÿ: ";
+            cout << "Ð†Ð¼'Ñ: ";
             cin >> name;
-            cout << "Îö³íêà: ";
+            cout << "ÐžÑ†Ñ–Ð½ÐºÐ°: ";
             cin >> grade;
             addStudent(students, size, name, grade);
         }
         else if (choice == 2) {
             string name;
-            cout << "²ì'ÿ: ";
+            cout << "Ð†Ð¼'Ñ: ";
             cin >> name;
             removeStudent(students, size, name);
         }
         else if (choice == 3) {
-            cout << "Ñåðåäí³é áàë: " << calculateAverage(students, size) << endl;
+            cout << "Ð¡ÐµÑ€ÐµÐ´Ð½Ñ–Ð¹ Ð±Ð°Ð»: " << calculateAverage(students, size) << endl;
         }
         else if (choice == 4) {
             displayStudents(students, size);
