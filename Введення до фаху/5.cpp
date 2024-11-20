@@ -10,48 +10,48 @@ struct Account {
 
 void createAccount(vector<Account>& accounts) {
     Account newAccount;
-    cout << "Ââåä³òü ³ì'ÿ âëàñíèêà ðàõóíêó: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ–Ð¼'Ñ Ð²Ð»Ð°ÑÐ½Ð¸ÐºÐ° Ñ€Ð°Ñ…ÑƒÐ½ÐºÑƒ: ";
     cin >> newAccount.owner;
-    cout << "Ââåä³òü ïî÷àòêîâèé áàëàíñ: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð¿Ð¾Ñ‡Ð°Ñ‚ÐºÐ¾Ð²Ð¸Ð¹ Ð±Ð°Ð»Ð°Ð½Ñ: ";
     cin >> newAccount.balance;
     accounts.push_back(newAccount);
-    cout << "Ðàõóíîê ñòâîðåíî óñï³øíî!" << endl;
+    cout << "Ð Ð°Ñ…ÑƒÐ½Ð¾Ðº ÑÑ‚Ð²Ð¾Ñ€ÐµÐ½Ð¾ ÑƒÑÐ¿Ñ–ÑˆÐ½Ð¾!" << endl;
 }
 
 void deposit(Account* account) {
     double amount;
-    cout << "Ââåä³òü ñóìó äëÿ ïîïîâíåííÿ: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÑÑƒÐ¼Ñƒ Ð´Ð»Ñ Ð¿Ð¾Ð¿Ð¾Ð²Ð½ÐµÐ½Ð½Ñ: ";
     cin >> amount;
     if (amount > 0) {
         account->balance += amount;
-        cout << "Ðàõóíîê ïîïîâíåíî óñï³øíî!" << endl;
+        cout << "Ð Ð°Ñ…ÑƒÐ½Ð¾Ðº Ð¿Ð¾Ð¿Ð¾Ð²Ð½ÐµÐ½Ð¾ ÑƒÑÐ¿Ñ–ÑˆÐ½Ð¾!" << endl;
     }
     else {
-        cout << "Íåâ³ðíà ñóìà äëÿ ïîïîâíåííÿ!" << endl;
+        cout << "ÐÐµÐ²Ñ–Ñ€Ð½Ð° ÑÑƒÐ¼Ð° Ð´Ð»Ñ Ð¿Ð¾Ð¿Ð¾Ð²Ð½ÐµÐ½Ð½Ñ!" << endl;
     }
 }
 
 void withdraw(Account* account) {
     double amount;
-    cout << "Ââåä³òü ñóìó äëÿ çíÿòòÿ: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ ÑÑƒÐ¼Ñƒ Ð´Ð»Ñ Ð·Ð½ÑÑ‚Ñ‚Ñ: ";
     cin >> amount;
     if (amount > 0 && amount <= account->balance) {
         account->balance -= amount;
-        cout << "Êîøòè çíÿòî óñï³øíî!" << endl;
+        cout << "ÐšÐ¾ÑˆÑ‚Ð¸ Ð·Ð½ÑÑ‚Ð¾ ÑƒÑÐ¿Ñ–ÑˆÐ½Ð¾!" << endl;
     }
     else {
-        cout << "Íåäîñòàòíüî êîøò³â àáî íåâ³ðíà ñóìà!" << endl;
+        cout << "ÐÐµÐ´Ð¾ÑÑ‚Ð°Ñ‚Ð½ÑŒÐ¾ ÐºÐ¾ÑˆÑ‚Ñ–Ð² Ð°Ð±Ð¾ Ð½ÐµÐ²Ñ–Ñ€Ð½Ð° ÑÑƒÐ¼Ð°!" << endl;
     }
 }
 
 void displayAccounts(const vector<Account>& accounts) {
     if (accounts.empty()) {
-        cout << "Íåìàº äîñòóïíèõ ðàõóíê³â." << endl;
+        cout << "ÐÐµÐ¼Ð°Ñ” Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð½Ð¸Ñ… Ñ€Ð°Ñ…ÑƒÐ½ÐºÑ–Ð²." << endl;
         return;
     }
-    cout << "²íôîðìàö³ÿ ïðî ðàõóíêè:" << endl;
+    cout << "Ð†Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ñ–Ñ Ð¿Ñ€Ð¾ Ñ€Ð°Ñ…ÑƒÐ½ÐºÐ¸:" << endl;
     for (const auto& account : accounts) {
-        cout << "Âëàñíèê: " << account.owner << ", Áàëàíñ: " << account.balance << endl;
+        cout << "Ð’Ð»Ð°ÑÐ½Ð¸Ðº: " << account.owner << ", Ð‘Ð°Ð»Ð°Ð½Ñ: " << account.balance << endl;
     }
 }
 
@@ -59,13 +59,13 @@ int main() {
     vector<Account> accounts;
     int choice;
     do {
-        cout << "\nÌåíþ:\n";
-        cout << "1. Ñòâîðèòè ðàõóíîê\n";
-        cout << "2. Ïîïîâíèòè ðàõóíîê\n";
-        cout << "3. Çíÿòè êîøòè\n";
-        cout << "4. Â³äîáðàçèòè ³íôîðìàö³þ ïðî ðàõóíêè\n";
-        cout << "5. Âèéòè\n";
-        cout << "Âàø âèá³ð: ";
+        cout << "\nÐœÐµÐ½ÑŽ:\n";
+        cout << "1. Ð¡Ñ‚Ð²Ð¾Ñ€Ð¸Ñ‚Ð¸ Ñ€Ð°Ñ…ÑƒÐ½Ð¾Ðº\n";
+        cout << "2. ÐŸÐ¾Ð¿Ð¾Ð²Ð½Ð¸Ñ‚Ð¸ Ñ€Ð°Ñ…ÑƒÐ½Ð¾Ðº\n";
+        cout << "3. Ð—Ð½ÑÑ‚Ð¸ ÐºÐ¾ÑˆÑ‚Ð¸\n";
+        cout << "4. Ð’Ñ–Ð´Ð¾Ð±Ñ€Ð°Ð·Ð¸Ñ‚Ð¸ Ñ–Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ñ–ÑŽ Ð¿Ñ€Ð¾ Ñ€Ð°Ñ…ÑƒÐ½ÐºÐ¸\n";
+        cout << "5. Ð’Ð¸Ð¹Ñ‚Ð¸\n";
+        cout << "Ð’Ð°Ñˆ Ð²Ð¸Ð±Ñ–Ñ€: ";
         cin >> choice;
 
         switch (choice) {
@@ -75,33 +75,33 @@ int main() {
         }
         case 2: {
             if (accounts.empty()) {
-                cout << "Íåìàº äîñòóïíèõ ðàõóíê³â äëÿ ïîïîâíåííÿ." << endl;
+                cout << "ÐÐµÐ¼Ð°Ñ” Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð½Ð¸Ñ… Ñ€Ð°Ñ…ÑƒÐ½ÐºÑ–Ð² Ð´Ð»Ñ Ð¿Ð¾Ð¿Ð¾Ð²Ð½ÐµÐ½Ð½Ñ." << endl;
                 break;
             }
             int index;
-            cout << "Ââåä³òü íîìåð ðàõóíêó äëÿ ïîïîâíåííÿ (0-" << accounts.size() - 1 << "): ";
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð½Ð¾Ð¼ÐµÑ€ Ñ€Ð°Ñ…ÑƒÐ½ÐºÑƒ Ð´Ð»Ñ Ð¿Ð¾Ð¿Ð¾Ð²Ð½ÐµÐ½Ð½Ñ (0-" << accounts.size() - 1 << "): ";
             cin >> index;
             if (index >= 0 && index < accounts.size()) {
                 deposit(&accounts[index]);
             }
             else {
-                cout << "Íåâ³ðíèé íîìåð ðàõóíêó!" << endl;
+                cout << "ÐÐµÐ²Ñ–Ñ€Ð½Ð¸Ð¹ Ð½Ð¾Ð¼ÐµÑ€ Ñ€Ð°Ñ…ÑƒÐ½ÐºÑƒ!" << endl;
             }
             break;
         }
         case 3: {
             if (accounts.empty()) {
-                cout << "Íåìàº äîñòóïíèõ ðàõóíê³â äëÿ çíÿòòÿ êîøò³â." << endl;
+                cout << "ÐÐµÐ¼Ð°Ñ” Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð½Ð¸Ñ… Ñ€Ð°Ñ…ÑƒÐ½ÐºÑ–Ð² Ð´Ð»Ñ Ð·Ð½ÑÑ‚Ñ‚Ñ ÐºÐ¾ÑˆÑ‚Ñ–Ð²." << endl;
                 break;
             }
             int index;
-            cout << "Ââåä³òü íîìåð ðàõóíêó äëÿ çíÿòòÿ (0-" << accounts.size() - 1 << "): ";
+            cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ð½Ð¾Ð¼ÐµÑ€ Ñ€Ð°Ñ…ÑƒÐ½ÐºÑƒ Ð´Ð»Ñ Ð·Ð½ÑÑ‚Ñ‚Ñ (0-" << accounts.size() - 1 << "): ";
             cin >> index;
             if (index >= 0 && index < accounts.size()) {
                 withdraw(&accounts[index]);
             }
             else {
-                cout << "Íåâ³ðíèé íîìåð ðàõóíêó!" << endl;
+                cout << "ÐÐµÐ²Ñ–Ñ€Ð½Ð¸Ð¹ Ð½Ð¾Ð¼ÐµÑ€ Ñ€Ð°Ñ…ÑƒÐ½ÐºÑƒ!" << endl;
             }
             break;
         }
@@ -110,11 +110,11 @@ int main() {
             break;
         }
         case 5: {
-            cout << "Âèõ³ä ç ïðîãðàìè." << endl;
+            cout << "Ð’Ð¸Ñ…Ñ–Ð´ Ð· Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¸." << endl;
             break;
         }
         default: {
-            cout << "Íåâ³ðíèé âèá³ð. Ñïðîáóéòå ùå ðàç." << endl;
+            cout << "ÐÐµÐ²Ñ–Ñ€Ð½Ð¸Ð¹ Ð²Ð¸Ð±Ñ–Ñ€. Ð¡Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ Ñ‰Ðµ Ñ€Ð°Ð·." << endl;
         }
         }
     } while (choice != 5);
