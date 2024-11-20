@@ -11,7 +11,7 @@ bool isPrime(int n) {
 
 int main() {
     int N;
-    cout << "Ââåä³òü ÷èñëî N: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ‡Ð¸ÑÐ»Ð¾ N: ";
     cin >> N;
 
     for (int i = 1; i <= N; i++) {
