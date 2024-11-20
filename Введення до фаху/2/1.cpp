@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
     int N;
-    cout << "Ââåä³òü ÷èñëî N: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ Ñ‡Ð¸ÑÐ»Ð¾ N: ";
     cin >> N;
 
     int evenSum = 0, oddSum = 0, totalSum = 0;
@@ -20,12 +20,12 @@ int main() {
     }
     cout << endl;
 
-    cout << "Ñóìà ïàðíèõ: " << evenSum << endl;
-    cout << "Ñóìà âñ³õ: " << totalSum << endl;
-    cout << "Ñóìà íåïàðíèõ: " << oddSum << endl;
+    cout << "Ð¡ÑƒÐ¼Ð° Ð¿Ð°Ñ€Ð½Ð¸Ñ…: " << evenSum << endl;
+    cout << "Ð¡ÑƒÐ¼Ð° Ð²ÑÑ–Ñ…: " << totalSum << endl;
+    cout << "Ð¡ÑƒÐ¼Ð° Ð½ÐµÐ¿Ð°Ñ€Ð½Ð¸Ñ…: " << oddSum << endl;
 
     double result = static_cast<double>(evenSum + totalSum + oddSum) / 2;
-    cout << "Ðåçóëüòàò: " << result << endl;
+    cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚: " << result << endl;
 
     return 0;
 }
