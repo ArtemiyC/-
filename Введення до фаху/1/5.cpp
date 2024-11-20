@@ -3,20 +3,20 @@ using namespace std;
 
 int main() {
     int grade;
-    cout << "Ââåä³òü îö³íêó (0-100): ";
+    cout << "Ğ’Ğ²ĞµĞ´Ñ–Ñ‚ÑŒ Ğ¾Ñ†Ñ–Ğ½ĞºÑƒ (0-100): ";
     cin >> grade;
 
     if (grade >= 90) {
-        cout << "Â³äì³ííî" << endl;
+        cout << "Ğ’Ñ–Ğ´Ğ¼Ñ–Ğ½Ğ½Ğ¾" << endl;
     }
     else if (grade >= 75) {
-        cout << "Äîáğå" << endl;
+        cout << "Ğ”Ğ¾Ğ±Ñ€Ğµ" << endl;
     }
     else if (grade >= 50) {
-        cout << "Çàäîâ³ëüíî" << endl;
+        cout << "Ğ—Ğ°Ğ´Ğ¾Ğ²Ñ–Ğ»ÑŒĞ½Ğ¾" << endl;
     }
     else {
-        cout << "Íåçàäîâ³ëüíî" << endl;
+        cout << "ĞĞµĞ·Ğ°Ğ´Ğ¾Ğ²Ñ–Ğ»ÑŒĞ½Ğ¾" << endl;
     }
 
     return 0;
